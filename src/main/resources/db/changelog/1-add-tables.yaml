@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-add-tables
+      author: avolkov
+      changes:
+        - createTable:
+            tableName: subscriber
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: login
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: telegram_id
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start_subscribe
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: end_subscribe
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type_subscribe
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: enable
+                  type: boolean
+                  constraints:
+                    nullable: false

@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://bot-postgres:5432/postgres
+    username: postgres
+    password: Pass2020!
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.globally_quoted_identifiers: true
+
+telegram:
+  name: buns_pies_bot
+  token: 1859107590:AAHxdsYc_9AWPreQAUTmM97V5CCkKKfVl1w
+  chanel-id: -1001415979632
+  support:
+    chat-id: 829991165
